@@ -21,6 +21,9 @@
     <ClInclude Include="MyPrint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Predicate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="car.cpp">
@@ -30,6 +33,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MyPrint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Predicate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

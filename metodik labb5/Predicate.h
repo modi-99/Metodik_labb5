@@ -25,3 +25,23 @@ class MyBinOp
 public:
 	double operator()(const double& lhs, const Car& rhs);
 };
+class MyUnOp
+{
+public:
+	double operator()(const Car& obj);
+	Car operator()(const Car& lhs, const double& rhs);
+};
+class Subtract
+{
+private:
+	double mean;
+public:
+	Subtract(double _mean);
+	double operator()(double& carModel);
+};
+
+struct Sort
+{
+	bool operator()(const double& lhs, const double& rhs);
+};
+

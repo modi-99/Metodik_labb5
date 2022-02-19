@@ -1,4 +1,7 @@
 #include "car.h"
+Car::Car()
+{
+}
 
 Car::Car(std::string name, double model) :name(name), model(model)
 {
@@ -9,6 +12,5 @@ bool Car::operator==(const Car& obj)
 		return true;
 	else
 		return false;
-}
-;
+};
 

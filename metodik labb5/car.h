@@ -9,6 +9,7 @@ public:
 	double model;
 
 
+	Car();
 	Car(std::string name, double model);
 
 	 bool operator==(const Car& obj);

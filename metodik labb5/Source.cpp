@@ -25,25 +25,25 @@ int main() {
 	Search search_for;
 	
 	/////////////////////////////// Punkt 1(std::for_each)
-	/*
+	
 	std::for_each(carVector.begin(), carVector.end(), print);
 	
 	
 	////////////////////////////// Punkt 2(std::find_if)
 	
-
+	
 	auto b=std::find_if(carVector.begin(), carVector.end(), find_if);
 	if (b != carVector.end()) {
 		print(*b);
 	}
 	else std::cout << "No car found" << std::endl;
 	
-	*/
-	/*
+	
+	
 	////////////////////////////// Punkt 3(std::adjacent)
-	auto c = *std::adjacent_find(carVector.begin(), carVector.end(), adjacent_find);
-	print(c);
-	/*
+	auto c =std::adjacent_find(carVector.begin(), carVector.end(), adjacent_find);
+	print(*c);
+	
 	////////////////////////////// Punkt 4(EQUAL)
 	
 	if (std::equal(carVector.begin(), carVector.end(), carArray, equal_sort))
@@ -59,7 +59,7 @@ int main() {
 	else
 		std::cout << "The subsequence was not found\n"; 
 	
-	*/
+	
 	
 	/////////////////////////////// Punkt 6(accumulate)
 	
@@ -72,27 +72,28 @@ int main() {
 	/////////////////////////////// Punkt 7(transform and fill)
 	std::vector<double> carVector3(carVector.size());
 	std::transform(carVector.begin(), carVector.end(), carVector3.begin(), MyUnOp()); //innehåller modelår endast
-	
+
 	std::vector<double>::iterator ptr;
-	/*for (ptr = carVector3.begin(); ptr < carVector3.end(); ptr++)
+	for (ptr = carVector3.begin(); ptr < carVector3.end(); ptr++)
 	{
 		std::cout << *ptr<<"\n";
 	}
 	
-	*/
+	
 	//////////////////////////////// Punkt 8(transform and subtracting mean from parameters)
 	Subtract mean(meanValue);
 	std::transform(carVector3.begin(), carVector3.end(), carVector3.begin(), mean); // samma sak utan m vectorn
-	//std::cout << "mean value is:" << meanValue << std::endl;
-	std::vector<double>::iterator ptr2;
-	/*for (ptr2 = carVector3.begin(); ptr2 < carVector3.end(); ptr2++)
+	std::cout << "mean value is:" << meanValue << std::endl;
+	
+	std::vector<double>::iterator it2;
+	for (it2 = carVector3.begin(); it2 < carVector3.end(); it2++)
 	{
-		std::cout <<"Your car model after subtracting mean is: " << *ptr2 << "\n";
+		std::cout <<"Your car model after subtracting mean is: " << *it2 << "\n";
 	}
-	*/
+	
 	///////////////////////////////// Punkt 9 (Sort)
 	std::sort(carVector3.begin(), carVector3.end(), Sort());
-
+	
 	std::vector<double>::iterator ptr3;
 	for (ptr3 = carVector3.begin(); ptr3 < carVector3.end(); ptr3++)
 	{
